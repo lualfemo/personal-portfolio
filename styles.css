@@ -15,6 +15,8 @@ html {
 #navbar {
     height: 8rem;
     background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
 }
 
 #navbar ul {
@@ -27,13 +29,19 @@ html {
     margin-right: 2rem;
 }
 
+#navbar ul a {
+  text-decoration: none;
+}
+
 #navbar li {
-    list-style: none;
-    padding: 2rem;
+  color: white;
+  list-style: none;
+  padding: 2rem;
 }
 
 #navbar li:hover {
     background-color: rgb(73, 187, 143);
+    border-radius: 1rem;
     cursor: pointer;
 }
 
@@ -41,8 +49,8 @@ html {
 
 #welcome-section {
     display: flex;
-    border: 1px solid green;
-    height: 89.6vh;
+    /* border: 1px solid green; */
+    height: 100vh;
     width: 100%;
     justify-content: space-around;
     align-items: center;
@@ -52,6 +60,7 @@ html {
 .introduction h1 {
     color: white;
     font-size: 3rem;
+    margin-top: 5rem;
 }
 
 .introduction p {
@@ -60,9 +69,10 @@ html {
 }
 
 .profile-image img {
-    width: 30rem;
-    border-radius: 40%;
-    box-shadow: 0px 0px 40px 14px rgb(78, 75, 75);
+  margin-top: 5rem;
+  width: 30rem;
+  border-radius: 0%;
+  box-shadow: 0px 0px 40px 14px rgb(78, 75, 75);
 }
 
 /*Projects*/
@@ -73,7 +83,7 @@ html {
     align-items: center;
     background-color: rgb(53, 50, 50);
     width: 100%;
-    border: 1px solid orangered;
+    /* border: 1px solid orangered; */
     height: auto;
 }
 
@@ -91,7 +101,7 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid orangered;
+    /* border: 1px solid orangered; */
     width: 80%;
     height: auto;
 }
@@ -101,14 +111,154 @@ html {
     height: 30rem;
 }
 
+.project-pictures a {
+  text-decoration: none;
+}
+
 .project-pictures div {
     margin: 3rem 4rem;
 }
 
-.project-pictures p {
+.project-tile {
     color: white;
-    font-size: 2rem;
+    font-size: 2.4rem;
     text-align: center;
     background-color: rgb(73, 187, 143);
-    line-height: 3.5rem;
+    line-height: 5rem;
+}
+
+/*Animacion de los links*/
+
+span {
+  color: rgb(73, 187, 143);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.project-pictures div a:hover span {
+  color: rgb(214, 98, 15);
+  transition: color .3s ease-out;
+}
+
+.project-pictures div a:hover .project-tile {
+  background-color: rgba(127, 125, 125, 0.604);
+  transition: .3s ease-out;
+}
+
+.project-pictures div:hover {
+  outline: 1px solid rgb(73, 187, 143);
+  box-shadow: 0px 0px 43px 3px rgb(73, 187, 143);
+}
+
+.project-tile, span {
+  transition: .3s ease-out;
+}
+
+/*Boton show all*/
+
+#show-all {
+  display: inline-block;
+  font-size: 2.3rem;
+  background-color: rgb(73, 187, 143);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: white;
+  margin: 2rem 0 6rem 0;
+}
+
+#show-all:hover {
+  background-color: rgba(127, 125, 125, 0.604);
+  transition: background-color .3s ease-out;
+}
+
+.icon {
+  display: inline-block;
+  font-size: 2rem;
+  color: white;
+}
+
+#show-all:hover i {
+  transform: translateX(3px);
+}
+
+#show-all i {
+  transition: .3s ease-out;
+}
+
+/*Contact Section*/
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 27, 27);
+  width: 100%;
+  height: 80vh;
+  border-bottom: 5px solid rgb(73, 187, 143);
+}
+
+.contact-paragraph {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-paragraph h2 {
+  font-size: 6rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-paragraph p {
+  font-size: 2rem;
+}
+
+.social-networks {
+  width: 80rem;
+  height: auto;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.social-networks a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.contact-icons {
+  margin-right: .5rem;
+}
+
+/*Icons animations*/
+
+.social-networks a:hover {
+  transform:translateY(1rem)
+}
+
+.social-networks a {
+  transition: transform 0.3s ease-out;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(27, 27, 27);
+  height: 8rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer-icon {
+  margin-left: 1rem;
+}
+
+@media (max-width: 767px) {
+  .social-networks {
+    width: 70rem;
+  }
 }
